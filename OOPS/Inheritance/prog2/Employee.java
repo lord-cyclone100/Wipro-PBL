@@ -10,29 +10,29 @@ public class Employee extends Person{
     this.nin = nin;
   }
 
-  public double getAnnualSalary() {
+  public double getAnnualSalary(){
     return annualSalary;
   }
 
-  public int getYearOfJoining() {
+  public int getYearOfJoining(){
     return yearOfJoining;
   }
 
-  public String getNIN() {
+  public String getNIN(){
     return nin;
   }
 
 
 
-  public void setAnnualSalary(double annualSalary) {
+  public void setAnnualSalary(double annualSalary){
     this.annualSalary = annualSalary;
   }
 
-  public void setYearOfJoining(int yearOfJoining) {
+  public void setYearOfJoining(int yearOfJoining){
     this.yearOfJoining = yearOfJoining;
   }
 
-  public void setNIN(String nin) {
+  public void setNIN(String nin){
     this.nin = nin;
   }
 
