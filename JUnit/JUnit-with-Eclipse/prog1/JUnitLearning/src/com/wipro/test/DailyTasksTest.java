@@ -2,6 +2,11 @@ package com.wipro.test;
 
 //import static org.junit.Assert;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+
 import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
@@ -9,7 +14,13 @@ import org.junit.Test;
 import com.wipro.task.DailyTasks;
 
 public class DailyTasksTest {
-
+	private DailyTasks dt;
+	
+	@Before
+	public void setup() {
+		dt = new DailyTasks();
+	}
+	
 	@Test
 	public void testDoStringConcat() {
 		DailyTasks dt = new DailyTasks();
@@ -36,5 +47,14 @@ public class DailyTasksTest {
 		boolean expected = true;
 		assertEquals(expected,actual);
 	}
+	
+	@Test
+    public void testCheckPresence_True() {
+        assertTrue(dt.checkPresence("Welcome to Java", "Java"));
+    }
 
+    @Test
+    public void testCheckPresence_False() {
+        assertFalse(dt.checkPresence("Welcome to Java", "Python"));
+    }
 }
